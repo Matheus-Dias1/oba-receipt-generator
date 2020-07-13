@@ -82,7 +82,6 @@ class App extends Component {
 
 
   render() {
-
     return (
       <div>
         {
@@ -137,12 +136,12 @@ class App extends Component {
                             <td>Unidade</td>
                           </tr>
                           {
-                            school.amount.map(iten => {
+                            school.amount.map((iten, index) => {
                               return (
-                                <tr key={school.school + this.state.data.products[school.amount.indexOf(iten)]}>
-                                  <td>{this.state.data.products[school.amount.indexOf(iten)]}</td>
+                                <tr key={school.school + this.state.data.products[index]}>
+                                  <td>{this.state.data.products[index]}</td>
                                   <td>{iten}</td>
-                                  <td>{this.state.data.measurement_units[school.amount.indexOf(iten)]}</td>
+                                  <td>{this.state.data.measurement_units[index]}</td>
                                 </tr>
                               )
                             })
